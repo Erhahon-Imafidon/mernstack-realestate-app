@@ -6,6 +6,11 @@ import { LazyFallback } from './components/ui';
 
 // Lazy load heavy pages - code split by route
 const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Agents = lazy(() => import('./pages/Agents'));
+const SignIn = lazy(() => import('./pages/SignIn'));
+const Login = lazy(() => import('./pages/Login'));
 
 const App = () => {
     return (
@@ -16,6 +21,11 @@ const App = () => {
                 <Routes>
                     <Route element={<Layout />}>
                         <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/agents" element={<Agents />} />
+                        <Route path="/signin" element={<SignIn />} />
+                        <Route path="/login" element={<Login />} />
                     </Route>
                 </Routes>
             </Suspense>
