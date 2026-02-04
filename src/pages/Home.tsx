@@ -1,4 +1,5 @@
-import Spacer from '../components/ui/Spacer';
+import Spacer from '@/components/ui/Spacer';
+
 const Home = () => {
     return (
         <div>
