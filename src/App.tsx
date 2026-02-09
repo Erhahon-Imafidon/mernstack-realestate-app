@@ -19,18 +19,20 @@ const App = () => {
 
             <Suspense fallback={<LazyFallback />}>
                 <Routes>
+                    <Route>
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/signin" element={<SignIn />} />
+                    </Route>
                     <Route element={<Layout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/agents" element={<Agents />} />
-                        <Route path="/signin" element={<SignIn />} />
-                        <Route path="/login" element={<Login />} />
+                        <Route path="*" element={<div>404 Not Found</div>} />
                     </Route>
                 </Routes>
             </Suspense>
         </>
-    );
-};
+    );};
 
 export default App;
