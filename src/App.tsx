@@ -9,8 +9,10 @@ const Home = lazy(() => import('@/pages/Home'));
 const About = lazy(() => import('@/pages/About'));
 const Contact = lazy(() => import('@/pages/Contact'));
 const Agents = lazy(() => import('@/pages/Agents'));
-const SignIn = lazy(() => import('@/pages/SignIn'));
-const Login = lazy(() => import('@/pages/Login'));
+
+// Keep auth pages inline - they're needed immediately and are lightweight
+import Login from '@/pages/Login';
+import SignIn from '@/pages/SignIn';
 
 const App = () => {
     return (
@@ -33,6 +35,7 @@ const App = () => {
                 </Routes>
             </Suspense>
         </>
-    );};
+    );
+};
 
 export default App;
