@@ -8,4 +8,6 @@
 
 @theme {
     --font-lato: 'Lato', sans-serif;
+    /* COLORS  */
+    --color-register: #fece51;
 }
