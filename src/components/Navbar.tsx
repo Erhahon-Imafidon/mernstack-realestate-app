@@ -12,13 +12,13 @@ const navLinks = [
 
 const Navbar = () => {
     return (
-        <header className="container font-lato fixed inset-x-0 top-0 z-50 flex items-center justify-between h-25">
+        <header className="container w-full font-lato fixed inset-x-0 top-0 z-50 flex items-center justify-between h-25">
             <div className="flex items-center gap-x-10">
                 <Link to="/" className="flex items-center gap-x-2">
                     <img src={Logo} alt="Logo" className="size-10" />
                     <span className="text-2xl font-bold">UrbnNest</span>
                 </Link>
-
+                <div className="absolute inset-y-0 w-1/3 bg-secondary right-0 -z-1" />
                 {/* Desktop Navigation */}
                 <nav className="hidden md:block">
                     <ul className="flex items-center gap-x-10">
